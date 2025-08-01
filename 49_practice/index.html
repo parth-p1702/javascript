@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blinking Bulb</title>
+  <style>
+    #bulb{
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #bulb img {
+      width: 200px;
+      transition: filter 0.3s ease;
+    }
+
+    /* This class will make the bulb "glow" */
+    .glow img {
+      filter: drop-shadow(1px 0 50px yellow);
+    }
+  </style>
+</head>
+<body>
+
+  <div id="bulb">
+    <img src="https://png.pngtree.com/png-vector/20220516/ourmid/pngtree-vector-light-bulb-cartoon-isolated-object-solution-design-vector-png-image_36535274.png" alt="Bulb">
+  </div>
+
+  <script>
+    setInterval(() => {
+      document.querySelector("#bulb").classList.toggle("glow");
+    }, 1000); // Toggles every 1 second
+  </script>
+
+</body>
+</html>
